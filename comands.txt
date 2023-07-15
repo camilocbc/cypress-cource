@@ -1,0 +1,10 @@
+report html
+1. npx mochawesome-merge .\cypress\reports\*.json | out-file -encoding ascii ./report1.json
+2. npx marge .\report1.json --reportDir .\cypress\reports
+3. npx cypress run --spec .\cypress\e2e\my_first_test.cy.js
+
+Docker with cypress
+install image of official repository
+docker run -it --entrypoint=cypress cypress/included info 
+docker run -it -v "%cd%":/e2e -w /e2e cypress/included --spec cypress/e2e/test/login.cy.ts --browser chrome
+docker logs "containerName"
