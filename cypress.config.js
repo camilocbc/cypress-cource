@@ -8,7 +8,7 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 module.exports = defineConfig({
   watchForFileChanges: true,
   defaultCommandTimeout: 5000,
-  reporter: "mochawesome",
+ // reporter: "mochawesome",
   screenshotOnRunFailure: true,
   reporterOptions:{
       charts:true,
@@ -20,13 +20,13 @@ module.exports = defineConfig({
       embeddedScreenshots: true
   },
 
-  //reporter: "cypress-mochawesome-reporter",
+  reporter: "cypress-mochawesome-reporter",
   
   e2e: {
     
     setupNodeEvents(on, config) {
       // implement node event listeners here
-     // require('cypress-mochawesome-reporter/plugin')(on);
+      require('cypress-mochawesome-reporter/plugin')(on);
      require('@cypress/grep/src/plugin')(config);
       on('task',{downloadFile})
     
