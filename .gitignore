@@ -1,0 +1,8 @@
+node_modules/
+reports/
+jsonlogs/
+runner-results/
+
+.vscode/
+node_modules
+mydownloads
