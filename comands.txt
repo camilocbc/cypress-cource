@@ -8,3 +8,12 @@ install image of official repository
 docker run -it --entrypoint=cypress cypress/included info 
 docker run -it -v "%cd%":/e2e -w /e2e cypress/included --spec cypress/e2e/test/login.cy.ts --browser chrome
 docker logs "containerName"
+docker run -i -t camilocbc/cypressdemo:1 --browser chrome --spec cypress/e2e/test/login.cy.ts
+
+add new images to dockerhub
+create a local images docker build -t cypressdemo:v1 .
+docker tag 728050a845c1 camilocbc/cypressdemo:1
+docker push cypressdemo:1 
+docker rmi 728050a845c1 --force 
+docker push camilocbc/cypressdemo:1
+docker pull camilocbc/cypressdemo:1
