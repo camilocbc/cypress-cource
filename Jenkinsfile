@@ -9,16 +9,24 @@ pipeline{
     options{
         ansiColor('xterm')
     }
-    steps{
-        step('Building'){
-            echo "Building the application"
+    stages{
+        stage('Building'){
+            step{
+                echo "Building the application"    
+            }
         }
-        step('Testing'){
-            bat "npm i"
-            bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+        stage('Testing'){
+             step{
+                script{
+                    sh "npm i"
+                    sh "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
+                }
+            }
         }
-        step('Deploying'){
-            echo "Deploy the application"
+        stage('Deploying'){
+            step{
+                echo "Deploy the application"
+            }    
         }
     }
 
