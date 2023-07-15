@@ -12,7 +12,7 @@ module.exports = defineConfig({
   screenshotOnRunFailure: true,
   reporterOptions:{
       charts:true,
-      overwrite:false,
+      overwrite:true,
       html: true,
       json: false,
       reportDir: "cypress/reports",
