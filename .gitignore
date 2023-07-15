@@ -6,3 +6,4 @@ runner-results/
 .vscode/
 node_modules
 mydownloads
+cypress/reports

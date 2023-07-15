@@ -14,7 +14,7 @@ module.exports = defineConfig({
       charts:true,
       overwrite:false,
       html: true,
-      json: true,
+      json: false,
       reportDir: "cypress/reports",
       reportPageTitle: "custom-title",
       embeddedScreenshots: true
