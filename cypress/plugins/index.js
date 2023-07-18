@@ -20,3 +20,8 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
 }
 
+const mysql = require("mysql")
+function queryTestDb(query, config){
+  
+}
+

@@ -6,7 +6,9 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 
 module.exports = defineConfig({
+ 
   watchForFileChanges: true,
+  
   defaultCommandTimeout: 5000,
  // reporter: "mochawesome",
   screenshotOnRunFailure: true,
@@ -49,3 +51,6 @@ module.exports = defineConfig({
    
   },
 });
+
+
+require('@applitools/eyes-cypress')(module);

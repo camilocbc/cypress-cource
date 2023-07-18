@@ -30,10 +30,12 @@
     "typescript": "^5.1.3"
   },
   "devDependencies": {
+    "@applitools/eyes-cypress": "^3.34.1",
     "@cypress/grep": "^3.1.5",
     "cypress-mochawesome-reporter": "^3.5.1",
     "mochawesome-merge": "^4.3.0",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.2.0",
+    "mysql": "^2.18.1"
   },
   "cypress-cucumber-preprocessor": {
     "stepDefinitions": [
